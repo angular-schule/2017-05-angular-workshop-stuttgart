@@ -59,7 +59,7 @@ ng serve -o
 ```
 
 Achtung! Die Installation kann bei langsamen Internet sehr lange dauern.
-Warte beim Schritt `Installing packages for tooling via npm.` mit viel Geduld ab!
+Warte beim Schritt `Installing packages for tooling via npm.` mit Geduld ab!
 
 
 > Auf http://localhost:4200 sollte nun eine Website mit dem Text "app works!" erscheinen!
