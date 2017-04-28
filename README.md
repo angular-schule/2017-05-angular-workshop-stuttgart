@@ -21,7 +21,7 @@ Damit wir am Dienstag gleich durchstarten können, solltest du ein paar Vorberei
 
 Alle Windows-User sollten vor Beginn des Kurses die `windows-build-tools` installieren.  
 Warnungen von NPM können ignoriert werden.  
-Nach der Installation müsst ihr eine neue Konsole starten!
+Nach der Installation musst du eine neue Konsole starten!
 
 ```
 npm install -g windows-build-tools
@@ -68,7 +68,7 @@ Wenn bei allen Teilnehmern "app works!" erscheint, können wir ohne Zeitverlust 
 
 ### Ich freue mich auf Dienstag! 
 
-Bei Fragen wende Dich einfach direkt an mich:  
+Bei Fragen wende dich einfach direkt an mich:  
 johannes.hoppe@haushoppe-its.de
 
 <hr>
