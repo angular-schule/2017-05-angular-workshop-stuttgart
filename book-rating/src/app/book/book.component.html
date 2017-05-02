@@ -1,0 +1,12 @@
+<div class="well">
+  <div class="thumbnail pull-right">
+    <img src="//ng-buch.de/avatar/{{book.rating}}">
+  </div>
+
+  <h2>{{ book.title }}
+    <small>Stars {{ book.rating }}</small>
+    <i *ngFor="let s of stars"
+    class="glyphicon glyphicon-star"></i>
+  </h2>
+  <p>{{ book.description }}</p>
+</div>
