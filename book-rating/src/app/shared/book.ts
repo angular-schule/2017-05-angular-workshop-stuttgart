@@ -4,7 +4,8 @@ export class Book {
     public title: string,
     public description: string,
     public rating = 0
-  ) { }
+  ) {
+  }
 
   rateUp() {
     if (this.rating < 5) {

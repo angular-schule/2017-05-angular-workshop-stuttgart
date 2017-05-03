@@ -9,4 +9,11 @@
     class="glyphicon glyphicon-star"></i>
   </h2>
   <p>{{ book.description }}</p>
+
+  <button (click)="book.rateUp()"
+    class="btn btn-default glyphicon glyphicon-thumbs-up"></button>
+
+  <button (click)="book.rateDown()"
+    class="btn btn-default glyphicon glyphicon-thumbs-down"></button>
+
 </div>
