@@ -32,6 +32,18 @@ describe('BookComponent', () => {
     expect(bookWasRatedUp).toBe(true);
   });
 
+  it('should forward calls to book.rateDown (mocks)', () => {
+
+    const bookMock = new Book('', '', '');
+    spyOn(bookMock, 'rateDown').and.callThrough();
+
+    component.book = bookMock;
+    component.rateDown();
+
+    expect(bookMock.rateDown).toHaveBeenCalled();
+  });
+
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
