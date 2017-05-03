@@ -20,7 +20,6 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-
     // soll sortiert werden!
     this.books = [
       new Book('000', 'Angular', 'Zurück in die Zukunft', 5),
