@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start-en": "ng serve --aot --locale en --i18n-file src/messages.en.xtb --i18n-format xtb"
   },
   "private": true,
   "dependencies": {

@@ -3,4 +3,4 @@
   *ngFor="let b of books; let i = index"
   (rated)="reorderBooks($event)"></br-book>
 
-Anzahl der Bücher: {{ books.length }}
+<span i18n="bookCount|Please provide a short text only!@@BOOK_COUNT">Anzahl der Bücher:</span> {{ books.length }}
