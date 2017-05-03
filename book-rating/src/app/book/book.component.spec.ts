@@ -24,14 +24,8 @@ describe('BookComponent', () => {
   it('should forward calls to book.rateUp (stubs)', () => {
 
     let bookWasRatedUp = false;
-
-    component.book = {
-      isbn: '',
-      title: '',
-      description: '',
-      rating: 0,
-      rateUp: () => { bookWasRatedUp = true; },
-      rateDown: () => {}
+    component.book = <any> {
+      rateUp: () => { bookWasRatedUp = true; }
     };
 
     component.rateUp();
