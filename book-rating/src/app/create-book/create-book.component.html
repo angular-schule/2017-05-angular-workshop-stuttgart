@@ -4,14 +4,20 @@
     <label for="isbn">ISBN</label>
     <input
       [(ngModel)]="book.isbn"
-      class="form-control" name="isbn" #isbn>
+      class="form-control" name="isbn"
+      required
+      minlength="3"
+      #isbn>
+
+    {{ isbn.className }}
   </div>
 
   <div class="form-group">
     <label for="title">Title</label>
     <input
       [(ngModel)]="book.title"
-      class="form-control" name="title">
+      class="form-control" name="title"
+      required>
   </div>
 
    <div class="form-group">
