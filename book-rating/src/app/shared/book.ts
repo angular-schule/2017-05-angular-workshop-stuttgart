@@ -2,7 +2,7 @@ export class Book {
 
   // factory method
   static empty(): Book {
-    return new Book('', '', '');
+    return new Book('000', '', '');
   }
 
   constructor(

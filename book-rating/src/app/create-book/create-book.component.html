@@ -1,10 +1,11 @@
-<form #createBookForm="ngForm" (ngSubmit)="add()">
+<form #createBookForm="ngForm" (ngSubmit)="add();">
 
   <div class="form-group">
     <label for="isbn">ISBN</label>
     <input
       [(ngModel)]="book.isbn"
-      class="form-control" name="isbn"
+      class="form-control"
+      name="isbn"
       required
       minlength="3"
       #isbn="ngModel">
