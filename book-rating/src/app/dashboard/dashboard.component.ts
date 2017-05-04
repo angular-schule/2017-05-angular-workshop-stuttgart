@@ -40,4 +40,9 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
   reorderBooks() {
     this.books.sort((a, b) => b.rating - a.rating);
   }
+
+  addBookToList(book: Book) {
+    this.books.push(book);
+    this.reorderBooks();
+  }
 }
