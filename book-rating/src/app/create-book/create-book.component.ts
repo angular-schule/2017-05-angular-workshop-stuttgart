@@ -4,7 +4,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'br-create-book',
   templateUrl: './create-book.component.html',
-  styleUrls: ['./create-book.component.css']
+  styleUrls: ['./create-book.component.less']
 })
 export class CreateBookComponent {
   book: Book = Book.empty();
