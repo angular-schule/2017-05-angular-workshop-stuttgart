@@ -1,3 +1,4 @@
+import { BookStoreService } from './shared/book-store.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +23,9 @@ import { CreateBookComponent } from './create-book/create-book.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    BookStoreService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

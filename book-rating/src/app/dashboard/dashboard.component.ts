@@ -9,32 +9,18 @@ import { Subscription } from 'rxjs/Subscription';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
-  books: Book[];
-
-  @ViewChild(BookComponent)
-  firstBookComponent: BookComponent;
+export class DashboardComponent implements OnInit {
+  books: Book[] = [];
 
   subscription: Subscription;
 
-  constructor() { }
+  constructor(private bs: BookStoreService) { }
 
   ngOnInit() {
-    // soll sortiert werden!
-    this.books = [
-      new Book('000', 'Angular', 'Zurück in die Zukunft', 5),
-      new Book('111', 'AngularJS 1.x', 'Oldie but Goldie', 3)
-    ];
-  }
 
-  ngAfterViewInit() {
-    this.subscription = this.firstBookComponent.rated.subscribe((book: Book) => {
-      console.log(book);
-    });
-  }
+    this.books$ = this.bs.getAll()
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
+      // this.bs.deleteAll().subscribe();
   }
 
   reorderBooks() {
