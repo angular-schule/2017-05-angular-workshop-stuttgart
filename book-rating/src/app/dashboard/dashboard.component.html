@@ -6,8 +6,3 @@
   (rated)="reorderBooks($event)"></br-book>
 
 <span i18n="bookCount|Please provide a short text only!@@BOOK_COUNT">Anzahl der Bücher:</span> {{ books.length }}
-
-<br-book
-  [book]="b"
-  *ngFor="let b of books$ | async"
-  (rated)="reorderBooks($event)"></br-book>

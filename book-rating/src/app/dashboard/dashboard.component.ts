@@ -13,7 +13,6 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class DashboardComponent implements OnInit {
   books: Book[] = [];
-  books$: Observable<Book[]>;
 
   subscription: Subscription;
 
@@ -22,10 +21,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.bs.getAll()
       .subscribe(books => this.books = books);
-
-    this.books$ = this.bs.getAll()
-
-      // this.bs.deleteAll().subscribe();
   }
 
   reorderBooks() {
