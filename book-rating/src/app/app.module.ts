@@ -1,3 +1,4 @@
+import { CounterActions } from './_actions/counter.actions';
 import { rootReducer } from './_reducers/rootReducer';
 import { IAppState } from './_reducers/types';
 import { BookStoreService } from './shared/book-store.service';
@@ -14,6 +15,7 @@ import { CreateBookComponent } from './create-book/create-book.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 
 import { NgRedux, NgReduxModule, DevToolsExtension } from '@angular-redux/store';
+import { CounterComponent } from './counter/counter.component';
 // TODO: @angular-redux/router
 
 @NgModule({
@@ -22,7 +24,8 @@ import { NgRedux, NgReduxModule, DevToolsExtension } from '@angular-redux/store'
     DashboardComponent,
     BookComponent,
     CreateBookComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { NgRedux, NgReduxModule, DevToolsExtension } from '@angular-redux/store'
     // TODO: NgReduxRouterModule
   ],
   providers: [
-    BookStoreService
+    BookStoreService,
+    CounterActions
   ],
   bootstrap: [AppComponent]
 })

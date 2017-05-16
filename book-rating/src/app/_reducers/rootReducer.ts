@@ -1,8 +1,9 @@
 // böse!!! import { combineReducers } from 'redux';
 import { combineReducers } from 'redux-seamless-immutable';
+import { counterReducer } from './counter.reducers';
 
 
 export const rootReducer = combineReducers({
-  counterState: () => {} // TODO: counterReducer
+  counterState: counterReducer
   // TODO: router: routerReducer
 });

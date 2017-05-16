@@ -1,0 +1,12 @@
+<h2>Counter
+  {{ (counterState$ | async)?.current }}
+</h2>
+
+<button (click)="actions.decrement()">-1</button>
+
+<button (click)="actions.increment()">+1</button>
+
+
+<!--<h2>Counter
+  {{ current$ | async }}
+</h2>-->
