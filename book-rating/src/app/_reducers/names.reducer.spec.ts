@@ -4,7 +4,7 @@ const reducer = (acc, name) => {
   const count = acc[name];
 
   // VORHER acc[name] = count ? count + 1 : 1;
-  const newAcc = acc.set(name, count ? count + 1 : 1);
+  const newAcc = si.from(acc).set(name, count ? count + 1 : 1);
 
   return newAcc;
 };
