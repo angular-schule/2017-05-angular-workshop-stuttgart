@@ -1,6 +1,7 @@
 let reducer = (acc, name) => {
-  // TODO
-  debugger;
+  const count = acc[name];
+  acc[name] = count ? count + 1 : 1;
+  return acc;
 };
 
 fdescribe('names reducer', () => {
