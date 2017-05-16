@@ -1,10 +1,10 @@
 import * as si from 'seamless-immutable';
+import { Book } from '../shared/book';
 
 export interface IAppState {
 
   counterState?: CounterState;
-
-  // booksState?: BookState
+  booksState?: BookState;
   // TODO: weitere reducer
 }
 
@@ -12,21 +12,7 @@ export type CounterState = si.Immutable<{
   current: number // !
 }>;
 
-// TODO: BookState
-
-
-
-/* BEISPIEL
-
-{
-  counterState: {
-    current: 0
-  },
-  booksState: {
-    books: []
-  }
-  router: any
-}
-
-
-*/
+export type BookState = si.Immutable<{
+  books: Book[];
+  isLoading: boolean;
+}>;
