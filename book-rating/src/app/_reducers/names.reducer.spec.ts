@@ -1,7 +1,12 @@
-let reducer = (acc, name) => {
+import * as si from 'seamless-immutable';
+
+const reducer = (acc, name) => {
   const count = acc[name];
-  acc[name] = count ? count + 1 : 1;
-  return acc;
+
+  // VORHER acc[name] = count ? count + 1 : 1;
+  const newAcc = acc.set(name, count ? count + 1 : 1);
+
+  return newAcc;
 };
 
 fdescribe('names reducer', () => {
@@ -9,7 +14,11 @@ fdescribe('names reducer', () => {
   it('should count names', () => {
 
     const names = ['Alice', 'Arnold', 'Bob', 'Arnold', 'Silvester'];
-    const expected = names.reduce(reducer, {});
+
+    const immmutableAcc = si.from({});
+    const expected = names.reduce(reducer, immmutableAcc);
+
+    expect(si.isImmutable(expected)).toBe(true); // EMPFEHLUNG !!
 
     expect(expected).toEqual({
       'Alice': 1,
