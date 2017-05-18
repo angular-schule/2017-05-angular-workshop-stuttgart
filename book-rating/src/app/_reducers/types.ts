@@ -1,5 +1,6 @@
 import * as si from 'seamless-immutable';
 import { Book } from '../shared/book';
+import { Action } from 'redux';
 
 export interface IAppState {
 
@@ -16,3 +17,7 @@ export type BookState = si.Immutable<{
   books: Book[];
   isLoading: boolean;
 }>;
+
+export interface ActionPayload<T> extends Action {
+  payload?: T;
+}
